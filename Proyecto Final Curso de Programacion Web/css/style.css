@@ -1,0 +1,97 @@
+/* Reset */
+* { box-sizing:border-box; margin:0; padding:0; font-family:Arial,sans-serif; }
+body { background:#1b1f50; color:#fff; text-align:center; }
+
+/* Header */
+.header { display:flex; justify-content:space-between; align-items:center; padding:12px 20px; background:#111; }
+.nav ul { display:flex; gap:15px; list-style:none; }
+.nav a { color:#fff; text-decoration:none; padding:8px; font-weight:bold; }
+.hamburger { display:none; font-size:24px; background:none; border:none; color:#fff; }
+
+/* Carrusel */
+.slideshow { position:relative;
+     width:80%;
+      max-width:900px; height:350px; margin:30px auto; overflow:hidden; border-radius:10px; background:#000; }
+.slides { display:flex; transition:transform 0.5s ease; }
+.slide { min-width:100%; height:100%; }
+.slide img { width:50%; height:100%; object-fit:cover; border-radius:10px; }
+
+/* Flechas */
+.prev,.next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:#fff; border:none; padding:12px; border-radius:50%; cursor:pointer; font-size:22px; z-index:10; }
+.prev{ left:10px; } 
+.next{ right:10px; }
+
+/* Puntitos */
+.dots { position:absolute; bottom:15px; width:100%; text-align:center; }
+.dots button { width:12px; height:12px; border-radius:50%; border:none; margin:0 6px; background:rgba(255,255,255,0.5); cursor:pointer; }
+.dots button.active { background:#fff; }
+
+/* Películas */
+.peliculas { padding:20px; }
+.peliculas h2 { margin-bottom:20px; color:white; }
+.fila-peliculas { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+.pelicula { width:200px; text-align:center; }
+.pelicula img { width:100%; height:250px; object-fit:cover; border-radius:8px; }
+.pelicula h3 { margin-top:8px; color:whitesmoke; }
+
+/* Footer */
+/* Footer general */
+.footer {
+    background-color: #222; /* color de fondo oscuro */
+    color: #fff;           /* texto blanco */
+    text-align: center;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Redes sociales */
+.footer .redes {
+    margin: 10px 0;
+}
+
+.footer .redes a {
+    display: inline-block;
+    margin: 0 10px;       /* espacio entre iconos */
+    transition: transform 0.3s; /* efecto al pasar el mouse */
+}
+
+.footer .redes a img {
+    width: 25px;           /* tamaño pequeño de los iconos */
+    height: auto;
+}
+
+/* Efecto al pasar el mouse sobre los iconos */
+.footer .redes a:hover img {
+    transform: scale(1.2); /* aumenta un poco al pasar el mouse */
+}
+
+/* Derechos de autor */
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsivo: en pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .footer .redes a {
+        margin: 0 5px;
+    }
+
+    .footer .redes a img {
+        width: 20px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+
+
+/* Responsivo */
+@media(max-width:800px){
+    .nav ul { display:none; position:absolute; top:60px; right:10px; background:#222; flex-direction:column; padding:12px; border-radius:6px; }
+    .hamburger { display:block; }
+    .fila-peliculas { flex-direction:column; align-items:center; }
+    .slideshow { width:95%; height:250px; }
+}
